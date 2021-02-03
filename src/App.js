@@ -123,8 +123,8 @@ let [Localstate,updaterLocalstate]=useState({
      
     </div>
     <div>
-      <button  id="green" onClick={()=>ToggleClickIn()} >Widraw</button>
-      <button id="red" disabled={firststate.totalvalue<0} onClick={()=>ToggleClickout()} >Check-in</button>
+      <button  id="green" onClick={()=>ToggleClickIn()} >Check-in</button>
+      <button id="red" disabled={firststate.totalvalue<0} onClick={()=>ToggleClickout()} >Widraw</button>
     </div>
     {
       firststate.toggleIn?
@@ -149,7 +149,7 @@ let [Localstate,updaterLocalstate]=useState({
     <h2>New Entry</h2>
     <input type="number" min="0" step=".1" onChange={(y)=>textChange("val",y)} placeholder="0.00 &#8377;" value={Localstate.val} />
     <textarea rows="10"  onChange={(y)=>textChange("message",y)} column="10" placeholder="Enter Note" value={Localstate.message} />
-    <button disabled={ firststate.totalvalue<Localstate.val} className="red-btn" onClick={()=>EntryOut()}>OUT</button>
+    <button disabled={  firststate.totalvalue<Localstate.val|| Localstate.val<=0} className="red-btn" onClick={()=>EntryOut()}>OUT</button>
   </div></div>:null
     }
     </div>
