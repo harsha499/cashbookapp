@@ -1,0 +1,191 @@
+.App{
+padding: 0;
+
+}
+body{
+  background-image: url('./download.jfif');
+  background-size: inherit;
+}
+table, td{
+  border: none;
+}
+
+tr{
+  
+  margin-bottom: 6px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+td{
+  display: inline-block;
+  width: 100%;
+}
+.message
+{
+  background-color:#edbebe;
+}
+.out
+{
+  background-color:#d50c60;
+  height: 42px;
+}
+.in
+{
+  background-color: #56d956;
+  height: 42px;
+}
+.green{
+  color: #c0ff00;
+  font-size: 19px;
+  font-weight: 500;
+}
+.grey{
+  color: #c0ff00;
+  font-size: 19px;
+  font-weight: 500;
+}
+.noentry
+{
+  font-weight: 800;
+  font-size: 27px;
+  color: #abc22a;
+}
+table {
+  border:none;
+  width: 96%;
+    margin: 11px
+}
+.data
+{
+  background-color:#121c4f75;
+  padding: 3%;
+    margin: 48px;
+  text-align: center;
+    height: 55vh;
+    overflow-y: auto;
+}
+#red
+{
+  width: 50%;
+  background-color:#f67b7bc7;
+}
+
+#green
+{
+  background-color:#2bff2b;
+  width: 50%;
+}
+button:hover{
+  cursor: pointer;
+}
+button:focus{
+  outline: none;
+}
+.action-group .red{
+  background: red;
+}
+
+.action-group .green{
+  background: green;
+}
+
+.balancetoday
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 7px;
+}
+
+.cashbookdiv
+{
+  width: 90%;
+  text-align: center;
+  color: #99ffde;
+  font-size: 34px;
+  margin-top: 7px;
+  font-weight: 700;
+}
+.model {
+  background-color: #000000cc;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.model-content{
+  background: white;
+  width: 50%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+}
+.model-content input{
+  width: 96%;
+  font-size: 3em;
+  padding-left: 15px;
+}
+.model-content textarea{
+  width: 98.6%;
+  height: 100px;
+  margin-top: 5px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.model-content button{
+  width: 100%;
+}
+
+.model-content button:disabled{
+  opacity: 0.5;
+}
+
+.model-content .green-btn{
+  font-size: 3em;
+  padding: 5px;
+  background: green;
+  color: white;
+}
+.model-content .red-btn{
+  font-size: 3em;
+  padding: 5px;
+  background: red;
+  color: white;
+}
+.model-content .close-btn{
+  font-size: 1em;
+  padding: 5px;
+  background: #a9a9a9;
+  color: white;
+  margin-top: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainDiv{
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
