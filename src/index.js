@@ -5,9 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
-const { worker } = require('./mocks/browser')
-
-worker.start()
 
 
 ReactDOM.render(
