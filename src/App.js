@@ -50,7 +50,7 @@ let [Localstate,updaterLocalstate]=useState({
   }
   let EntryOut=()=>{
     console.log(5)
-    let Obj={message:Localstate.message,time:Date(),InVal:0,OutVal:Localstate.val,type:"OUT"};
+    let Obj={message:Localstate.message,time:new Date().toUTCString(),InVal:0,OutVal:Localstate.val,type:"OUT"};
     
     let newState = JSON.parse(JSON.stringify(firststate)); 
     newState.toggleOut=false;
@@ -110,7 +110,7 @@ let [Localstate,updaterLocalstate]=useState({
         {   firststate.cashbook.map((x,y)=>{
             return  <tr className="" key={x.time}> 
               <td className="message"><span>{x.time}</span><br/><span>{x.message}</span> </td>
-              <td className="out"><span>Out</span><br/><span>{x.OutVal==0?"-" :x.OutVal }&#8377; </span>
+              <td className="out"><span>Widraw</span><br/><span>{x.OutVal==0?"-" :x.OutVal }&#8377; </span>
               </td>
               <td className="in"><span>In</span><br/><span>{x.InVal==0?"-":x.InVal} &#8377;</span></td>
                </tr>
@@ -136,7 +136,7 @@ let [Localstate,updaterLocalstate]=useState({
       <h2>New Entry</h2>
       <input type="number"  min="0" step=".1" onChange={(y)=>textChange("val",y)} placeholder="0.00 &#8377;"  value={Localstate.val} />
       <textarea rows="10"  onChange={(y)=>textChange("message",y)} column="10" placeholder="Enter Note" value={Localstate.message} />
-      <button className="green-btn" disabled={Localstate.val<=0} onClick={()=>EntryIn()}>IN</button>
+      <button className="green-btn" disabled={Localstate.val<=0} onClick={()=>EntryIn()}>Check-in</button>
     </div></div>:null
     }
     {
@@ -149,7 +149,7 @@ let [Localstate,updaterLocalstate]=useState({
     <h2>New Entry</h2>
     <input type="number" min="0" step=".1" onChange={(y)=>textChange("val",y)} placeholder="0.00 &#8377;" value={Localstate.val} />
     <textarea rows="10"  onChange={(y)=>textChange("message",y)} column="10" placeholder="Enter Note" value={Localstate.message} />
-    <button disabled={  firststate.totalvalue<Localstate.val|| Localstate.val<=0} className="red-btn" onClick={()=>EntryOut()}>OUT</button>
+    <button disabled={  firststate.totalvalue<Localstate.val|| Localstate.val<=0} className="red-btn" onClick={()=>EntryOut()}>Widraw</button>
   </div></div>:null
     }
     </div>
