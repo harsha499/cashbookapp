@@ -6,7 +6,7 @@ function App() {
 
 let [Localstate,updaterLocalstate]=useState({
   val:0,
-  message:""
+  message:"" 
 })
 
   let [firststate,updaterstate]=useState({
