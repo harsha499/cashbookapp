@@ -3,10 +3,10 @@ import Moment from 'react-moment';
 import './App.css';
 
 function App() {
-
+let cook;
 let [Localstate,updaterLocalstate]=useState({
   val:0,
-  message:""
+  message:"" 
 })
 
   let [firststate,updaterstate]=useState({
